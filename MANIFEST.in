@@ -1,0 +1,10 @@
+include README.md
+#include README.md
+include RELEASES.md
+include LICENSE
+#include OK3/_criterion.pxd
+#include OK3/_tree.pxd
+#include OK3/_splitter.pxd
+include stpredictions/OK3/*.py
+
+recursive-include stpredictions/data *.csv *.rst *.jpg *.txt *.arff *.xml *.h5
