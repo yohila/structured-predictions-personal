@@ -10,7 +10,6 @@ from setuptools.extension import Extension
 
 import numpy
 from Cython.Build import cythonize
-from distutils.command.build_py import build_py as _build_py
 
 sys.path.append(os.path.join("stpredictions", "helpers"))    ########################333
 from openmp_helpers import check_openmp_support
@@ -61,20 +60,20 @@ if sys.platform.startswith('darwin'):
 
 setup(
     name='structured-predictions',
-    version='0.0.9',
-    description='Structured-Predictions',
+    version='0.0.1',
+    description='Python Optimal Transport Library',
     # long_description=README,
     long_description_content_type='text/markdown',
-    author=u"Florence d'Alché-Buc (Researcher), Luc Motte (Researcher), Tamim El Ahmad (Researcher) , Awais Sani (Engineer), Danaël  Schlewer-Becker(Engineer), Gaëtan Brison (Engineer)",
-    author_email='structured-predictions@gmail.com',
-    url='https://github.com/hi-paris/structured-predictions',
+    author=u'Remi Flamary, Nicolas Courty',
+    author_email='remi.flamary@gmail.com, ncourty@gmail.com',
+    url='https://github.com/PythonOT/POT',
     packages=find_packages(exclude=["benchmarks"]),
     include_package_data=True,
     ext_modules=cythonize(Extension(
         name="*",
-        sources=["stpredictions/models/OK3/*.pyx"],  # cython/c++ src files
+        sources=["stpredictions/OK3/*.pyx"],  # cython/c++ src files
         #language="c++",
-        include_dirs=[numpy.get_include(), os.path.join(ROOT, 'stpredictions/models/OK3/test')],
+        include_dirs=[numpy.get_include(), os.path.join(ROOT, 'stpredictions/OK3/test')],
         # include_dirs=[numpy.get_include()],
         extra_compile_args=compile_args,
         extra_link_args=link_args
@@ -87,10 +86,8 @@ setup(
     scripts=[],
     data_files=[],
     setup_requires=["oldest-supported-numpy", "cython>=0.23"],
-    # install_requires=["numpy>=1.16", "scipy>=1.0", "scikit-learn", "torch", 
-    #          "liac-arff", "requests"],
-    install_requires=["numpy", "scipy", "scikit-learn", "torch", 
-             "liac-arff", "requests"],
+    install_requires=["numpy>=1.16", "scipy>=1.0", "scikit-learn", "torch", 
+             "pandas", "h5py", "scikit-multilearn", "liac-arff", "requests", "line_profiler"],
     python_requires=">=3.6",
     classifiers=[
         'Development Status :: 5 - Production/Stable',
