@@ -1,14 +1,6 @@
 stpredictions.models.OK3 package
 ================================
 
-Subpackages
------------
-
-.. toctree::
-   :maxdepth: 4
-
-   stpredictions.models.OK3.tests
-
 Submodules
 ----------
 

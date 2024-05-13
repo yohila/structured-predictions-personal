@@ -4,6 +4,9 @@ wheel
 oldest-supported-numpy
 Cython==0.29.36
 
+# arff
+# scikit-learn
+
 
 
 # main doc tool

@@ -10,9 +10,7 @@ Welcome to structured-predictions's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   modules
-.. automodule::
-   :members:
+
 
 Indices and tables
 ==================

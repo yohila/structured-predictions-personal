@@ -12,6 +12,14 @@ stpredictions.datasets.load\_data module
    :undoc-members:
    :show-inheritance:
 
+stpredictions.datasets.qm9\_utils module
+----------------------------------------
+
+.. automodule:: stpredictions.datasets.qm9_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 
