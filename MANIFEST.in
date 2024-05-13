@@ -5,6 +5,8 @@ include LICENSE
 #include OK3/_criterion.pxd
 #include OK3/_tree.pxd
 #include OK3/_splitter.pxd
-include stpredictions/OK3/*.py
+include stpredictions/models/OK3/*.py
+include stpredictions/models/DIOKR/tests
+include stpredictions/models/IOKR/tests
 
-recursive-include stpredictions/data *.csv *.rst *.jpg *.txt *.arff *.xml *.h5
+recursive-include stpredictions/datasets *.csv *.rst *.jpg *.txt *.arff *.xml *.h5
